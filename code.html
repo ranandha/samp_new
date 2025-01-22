@@ -1,0 +1,16 @@
+
+    <h2>Arduino Code</h2>
+    <pre>
+    #define MQ135_PIN A0
+    #define LED_PIN 2
+    void setup() {
+        Serial.begin(9600);
+        pinMode(LED_PIN, OUTPUT);
+    }
+    void loop() {
+        int sensorValue = analogRead(MQ135_PIN);
+        digitalWrite(LED_PIN, sensorValue > 400 ? HIGH : LOW);
+        delay(1000);
+    }
+    </pre>
+    
